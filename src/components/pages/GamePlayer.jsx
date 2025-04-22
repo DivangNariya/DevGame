@@ -1,0 +1,20 @@
+// src/pages/GamePlayer.jsx
+import { useParams } from "react-router-dom";
+
+export default function GamePlayer() {
+  const { title } = useParams(); // Get the game folder name
+  const gameUrl = `/All Games/${title}/index.html`; // Path to local game
+
+  return (
+    <div className="min-w-full h-screen p-4 md:p-6 lg:p-8 bg-gray-100">
+      <div className="min-w-full h-full rounded overflow-hidden shadow-lg">
+        <iframe
+          src={gameUrl}
+          title={title}
+          className="min-w-full h-full"
+          allowFullScreen
+        />
+      </div>
+    </div>
+  );
+}
