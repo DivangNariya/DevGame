@@ -18,7 +18,8 @@ function App() {
         <Route path="/affiliates" element={<Affiliates />} /> 
         <Route path="/contact-us" element={<ContactUs />} /> 
         <Route path="/about-us" element={<AboutUs />} /> 
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} /> 
+        <Route path="/privacy-policy" element={<PrivacyPolicy
+         />} /> 
       </Routes>
     </Router>
   );
