@@ -9,7 +9,7 @@ export default function GameList() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen min-w-full bg-black text-white relative">
+    <div className="min-h-screen w-full bg-black text-white relative">
       <Header onMenuClick={() => setMenuOpen(true)} />
 
       {menuOpen && (
@@ -45,7 +45,7 @@ export default function GameList() {
 
       {/* Main Content */}
       <main className="pt-14 px-4 pb-8">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {games.map((game) => (
             <Link
               key={game.id}

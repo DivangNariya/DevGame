@@ -2,19 +2,18 @@
 import { useParams } from "react-router-dom";
 
 export default function GamePlayer() {
-  const { title } = useParams(); // Get the game folder name
-  const gameUrl = `/All Games/${title}/index.html`; // Path to local game
+  const { title } = useParams();
+  // Encode spaces in folder path for correct URL resolution
+  const gameUrl = encodeURI(`/All Games/${title}/index.html`);
 
   return (
-    <div className="min-w-full min-h-screen ">
-      <div className="min-w-full min-h-screen rounded overflow-hidden shadow-lg">
-        <iframe
-          src={gameUrl}
-          title={title}
-          className="min-w-full min-h-screen"
-          allowFullScreen
-        />
-      </div>
+    <div className="w-full h-screen overflow-hidden">
+      <iframe
+        src={gameUrl}
+        title={title}
+        className="w-full h-full"
+        allowFullScreen
+      />
     </div>
   );
 }
