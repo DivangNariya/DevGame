@@ -6,12 +6,12 @@ export default function GamePlayer() {
   const gameUrl = `/All Games/${title}/index.html`; // Path to local game
 
   return (
-    <div className="min-w-full h-screen ">
-      <div className="min-w-full h-full rounded overflow-hidden shadow-lg">
+    <div className="min-w-full min-h-screen ">
+      <div className="min-w-full min-h-screen rounded overflow-hidden shadow-lg">
         <iframe
           src={gameUrl}
           title={title}
-          className="min-w-full h-full"
+          className="min-w-full min-h-screen"
           allowFullScreen
         />
       </div>
